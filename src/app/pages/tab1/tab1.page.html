@@ -1,0 +1,28 @@
+<ion-header no-border color="dark">
+  <ion-toolbar color="dark">
+    <ion-title>
+      Pendientes
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+
+  <app-listas [terminada]="false"></app-listas>
+
+<!--<ion-list color="dark">
+  <ion-item color="dark" *ngFor="let lista of listas" detail (click)="redirigir(lista)">
+    <ion-label>{{ lista.titulo }}</ion-label>
+    <ion-note color="tertiary" slot="end">{{ lista.items.length}} actividades</ion-note>
+  </ion-item>
+
+</ion-list>-->
+
+<!-- fab placed to the top end -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="agregarNuevo()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

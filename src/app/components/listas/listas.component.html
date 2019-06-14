@@ -1,0 +1,20 @@
+<ion-item-sliding *ngFor="let lista of listas | filtro:terminada">
+
+  <ion-item-options side="start">
+    <ion-item-option  (click)="editarLista(lista)"> <ion-icon slot="icon-only" name="create"></ion-icon> </ion-item-option>
+  </ion-item-options>
+
+  <ion-list color="dark">
+    <ion-item color="dark"  detail (click)="redirigir(lista)">
+      <ion-label>{{ lista.titulo }}</ion-label>
+      <ion-note color="tertiary" slot="end">{{ lista.items.length}} actividades</ion-note>
+    </ion-item>
+  </ion-list>
+
+  <ion-item-options side="end">
+    <ion-item-option color="danger" (click)="borrarActividad(lista)" >
+      <ion-icon name="close" slot="icon-only"></ion-icon>
+    </ion-item-option>
+  </ion-item-options>
+
+</ion-item-sliding>
